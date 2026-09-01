@@ -1,0 +1,130 @@
+# Website Redesign: What We Want To Do
+
+## The Problem
+
+Right now the website (https://edinburgh-orthodox.org.uk) shows the wrong things first.
+The homepage opens with a big banner and a row of icons, while the things people actually
+need, like this week's service times, how to donate, and how to find the churches, are
+hidden in the menu or buried on separate pages.
+
+There is no live calendar of services on the front page. There is no FAQ page. There is no
+way for people to give money toward specific items for the new church. The community's
+history takes up room on the homepage when it should have its own page. And the volunteers
+who update the schedule each week have to type it out again by hand every time they post it
+to WhatsApp, Facebook, and email.
+
+## What We Want
+
+Redesign the website we already have. We are not moving platforms and not writing new code.
+Everything is changed in the WordPress admin, by someone who does not need to be technical.
+
+The homepage becomes live and useful, in this order from top to bottom:
+
+1. The community name and a small bit of branding.
+2. Quick links to the most popular pages (service times, find us, donate, newsletter).
+3. The services calendar for this week.
+4. A "weekly announcements" text block.
+5. The three churches and their addresses.
+6. Blog posts about past events.
+7. Links to History, Wishlist, FAQ, and Donations.
+
+The calendar itself is kept in Google Calendar. Volunteers edit it there, without needing to
+log in to WordPress. Each week starts from a set of default services, and fasting notes and
+feast names are filled in from a church-year calendar file. A new Wishlist page lets people
+give money toward specific items for the new church. A new FAQ page answers common questions.
+The Donations page is tidied up.
+
+Two changes from today are important:
+
+- Each service is labelled with where it is held: Meadow Lane, Chapel Street, or Craigmillar
+  Park, so people go to the right building.
+- The schedule editor can press a button to copy the week as ready-to-paste text for
+  WhatsApp, Facebook, and email, instead of retyping it.
+
+## The List of Needs
+
+This is the full list of what different people need the website to do.
+
+1. As someone who attends, I want to see this week's services and times on the homepage, so I know when to come without digging through menus.
+2. As someone who attends, I want to see where each service is held (Meadow Lane, Chapel Street, or Craigmillar Park), so I go to the right building.
+3. As a first-time visitor, I want quick links to services, find us, donations, and contact at the top of the page, so I can find what I need in one tap.
+4. As a first-time visitor, I want an FAQ page grouped by topic, so I can find answers without emailing anyone.
+5. As someone who donates, I want the community's history on its own page, so the homepage is not cluttered by it.
+6. As someone thinking of supporting the new church, I want to see a wishlist of items with set prices, so I know exactly what the community still needs.
+7. As someone who donates, I want to pick one or more wishlist items and pay the combined total in one go, so giving is easy and I can support specific items.
+8. As the treasurer, I want to see which wishlist items received money, so I can report on and allocate the gifts.
+9. As someone who attends, I want to see the fasting note on each calendar day (strict fast, wine and oil, fish, or normal), so I can keep the fast correctly.
+10. As someone who attends, I want to see the day's feast or commemoration name on the calendar, so I know what the day is.
+11. As the schedule editor, I want the usual weekly services (Matins, Vespers, Supplicatory Canon, weekend Divine Liturgy) filled in automatically, so I do not type them every week.
+12. As the schedule editor, I want to change a single week when something special happens (a weekday Liturgy, a feast-day change, an evening talk), so unusual weeks are easy to set without touching the normal pattern.
+13. As the schedule editor, I want to edit the calendar in Google without any WordPress login, so I, a volunteer, can update it from my phone.
+14. As the schedule editor, I want to write the weekly announcements in the same place I edit the week, so the calendar and announcements stay together.
+15. As the schedule editor, I want Fr Luke's Sunday catechesis to appear every week in the calendar, so it is always shown without being added by hand each time.
+16. As the schedule editor, I want things that do not happen every week (Bishop Raphael's talks, Wednesday confessions) listed in the announcements, not the calendar, so the calendar does not claim a service is happening when it is not.
+17. As the schedule editor, I want a "copy this week as text" button, so I can paste the calendar and announcements into WhatsApp, Facebook, and email without retyping.
+18. As a member of the public, I want the weekly post to reach me on WhatsApp in the community announcements channel, so I stay informed where I already read.
+19. As a member of the public, I want the weekly post to appear on our Facebook page, so the public schedule is visible there too.
+20. As a newsletter subscriber, I want the weekly post sent to me by email, so I receive the schedule without visiting the site.
+21. As a first-time visitor, I want the three churches' addresses and map links at the bottom of the homepage, so I can find the right place.
+22. As a regular attendee, I want blog posts about past events kept below the calendar and announcements, so the homepage leads with what is happening now, not what already happened.
+23. As the person updating the website, I want a simple picture of how each redesigned page should look, so I know what to build before I start.
+24. As the site owner, I want the donations page presented more clearly, so giving feels prominent and trustworthy.
+
+## Decisions We Have Made
+
+Here are the decisions already agreed, in plain terms.
+
+- **We stay where we are.** We redesign the existing WordPress.com site. We are not moving to a new platform and not writing new code. Everything is done in the WordPress admin and in the Google Calendar and Square dashboards.
+
+- **The calendar lives in Google Calendar.** It is shown on the homepage. Volunteers edit it in Google. They do not need WordPress access.
+
+- **One shared "week" is the heart of it.** The weekly pattern, the special changes for a week, and the announcements block are all part of one thing, and everything else (the calendar, the copy button, the fasting notes) uses that same week. The details:
+  - The normal week is: Weekday Matins at 7.30am; Weekend Matins at 8.30am followed by Divine Liturgy at 10.00am; Vespers at 6.30pm every day; Supplicatory Canon on Monday at 7.00pm (after Vespers, to the Mother of God); Fr Luke's Catechesis on Sunday at 4.00pm.
+  - Special changes for one week: a weekday Liturgy (either Matins 5.45am and Liturgy 7.00am, or Matins 8.30am and Liturgy 10.00am), a feast-day change, or an evening talk (before or after Vespers).
+  - The announcements block is text only, on the same page under the calendar, edited by the same person. It holds the things that do not happen every week (Bishop Raphael's talks, Wednesday confessions) and any upcoming events.
+
+- **Every service is labelled with its building.** There is one calendar showing all three places: Meadow Lane, Chapel Street, and Craigmillar Park. Each service says where it is. The three addresses and map links are listed at the bottom of the homepage.
+
+- **Fasting notes and feast names are filled in from a church-year file, then checked by the editor.** The file covers 1 Sep 2026 to 31 Aug 2027. It is used only for the fasting note and feast name, never for the service times themselves. The file uses five fasting levels:
+  - Strict fast (95 days)
+  - Wine and oil allowed (49 days)
+  - Fish allowed (32 days)
+  - Fast free (31 days)
+  - Fast day, dairy, eggs, and fish allowed (7 days, the Cheesefare week)
+  - The exact symbol or picture to show for each level is still to be decided, except strict fast, which is shown as a cross on red.
+
+- **The wishlist.** Fixed-price items for the new church, with the prices kept in a separate list. In Square, a single checkout page can list several items, and the person picks what they want and pays one combined total. Square reports which items were given to. If that proves awkward, the simple fallback is one Square link per item.
+
+- **The top of the homepage.** Quick links to service times, find us, donate, newsletter, and contact. This list is our own choice of what matters most, not based on website statistics.
+
+- **Posting to WhatsApp, Facebook, and email.** We do it in stages. First, a "copy this week" button that puts the week into plain text ready to paste anywhere. Then, a send through Mailchimp for email. Then, later, automatic posting to Facebook and WhatsApp.
+
+- **The FAQ page.** A page grouped by topic. We set up the structure now and write the questions and answers later.
+
+- **Pictures of how it should look.** Simple HTML pages that anyone can open in a browser to see the layout, kept in the `mockups/` folder as a visual guide. They are not the real website and are not uploaded anywhere. A summary of every styling change, compared to the live site, is in `mockup-changes.md`.
+
+## How We Will Check It Is Done
+
+There are no automatic tests, because this website has no code of its own. Every change is made by hand in the WordPress admin and the other dashboards, so each change is checked by a person, by hand, against the live website.
+
+For each item in the list of needs above, the check is: can a normal visitor actually do the thing it describes, by looking at the live site, without any special access.
+
+The one thing to check carefully is that the week stays consistent: the same services, times, fasting notes, and announcements must show up on the homepage, in the copy-for-posting text, and in the correct order and place.
+
+## Not In This Project
+
+These things are deliberately not part of this project:
+
+- Automatic posting to Facebook and WhatsApp. We do the copy button and Mailchimp first.
+- Working out the fasting calendar from scratch. The website just shows what the church-year file says and the editor confirms it.
+- Showing the daily scripture readings, the Tone, or the Eothinon.
+- Deciding the final symbol for each fasting level. Only "cross on red" for strict fast is fixed for now.
+- Writing the FAQ questions and answers. We set up the page structure now.
+- The final wishlist items and their prices. Those go in a separate list.
+- Moving the website to a new platform or rebuilding it as a static site.
+
+## Extra Notes
+
+- The current hand-made format for the weekly post is kept as our guide for what the copy button should produce. The two examples are in the `examples/` folder: `example-cal-post.md` (the calendar plus announcements) and `example-text-post.md` (announcements on their own).
+- Editing is shared: Google Calendar is where the schedule is changed, and WordPress just shows it. The editors are not website admins.
+- The donate link today is a single Square link. The wishlist improves this to one checkout for several items.
