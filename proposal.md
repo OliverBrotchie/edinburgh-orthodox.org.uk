@@ -117,9 +117,11 @@ We do this in stages:
 ## 7. Pictures of how it should look
 
 Simple HTML and CSS files, openable by double-click, kept in the `mockups/` folder as a
-visual guide. They are not the real website and are not uploaded anywhere. The real work is
-done in the WordPress admin. A summary of every styling change, compared to the live site,
-is in `mockup-changes.md`.
+visual guide. They are also live on GitHub Pages and cover every page: the homepage, a
+card-style variant, Our Churches, Wishlist, FAQ, Donations (with the bookstore honesty-box),
+Clergy, and News. They are not the real website and are not uploaded anywhere. The real work
+is done in the WordPress admin. A summary of every styling change, compared to the live
+site, is in `mockup-changes.md`.
 
 ## 8. The fasting symbol (still to decide)
 

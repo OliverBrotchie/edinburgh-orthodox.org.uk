@@ -23,6 +23,20 @@ body {
 
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 
+/* All links: ink colour, no underline, pointer cursor. Specific rules below
+   override colour where needed (e.g. footer, church blocks, buttons). */
+a { color: var(--ink); text-decoration: none; cursor: pointer; }
+a:hover { color: var(--ink); text-decoration: none; }
+a:visited { color: var(--ink); }
+
+/* Links inside page content are underlined (distinct from nav/footer/buttons). */
+.wrap a:not(.btn):not(.church):not(.item) { text-decoration: underline; }
+.wrap a:not(.btn):not(.church):not(.item):hover { text-decoration: underline; }
+
+/* Heading links (e.g. a section title that links to its page) stay clean. */
+.wrap h1 a, .wrap h2 a, .wrap h3 a { text-decoration: none !important; }
+.wrap h1 a:hover, .wrap h2 a:hover, .wrap h3 a:hover { text-decoration: none !important; }
+
 /* Header: paper background, site title left with a small logo, nav right.
    Collapses to a burger on mobile. */
 .site-head { background: var(--paper); border-bottom: 1px solid var(--line); }
@@ -30,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 48px;
   padding: 16px 24px;
   max-width: 1200px; margin: 0 auto;
 }
@@ -43,14 +57,72 @@ body {
 }
 .brand img { height: 36px; width: auto; border-radius: 50%; }
 
-/* Top nav: plain links, not buttons. One row; overflowing links move into
-   the burger (which appears below a wide breakpoint). */
-.site-nav ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 18px; flex-wrap: nowrap; }
-.site-nav a { color: var(--ink); text-decoration: none; font-size: 16px; white-space: nowrap; }
-.site-nav a:hover { text-decoration: underline; }
+/* Header layout: brand on the left, nav area (row + more-menu) on the right. */
+.nav-area { display: flex; align-items: center; gap: 20px; }
+.site-nav { display: flex; align-items: center; gap: 20px; }
 
-.nav-toggle { display: none; background: none; border: 0; padding: 6px; cursor: pointer; }
-.nav-toggle div { width: 22px; height: 2px; background: var(--ink); margin: 4px 0; }
+.nav-row { display: flex; list-style: none; margin: 0; padding: 0; gap: 22px; flex-wrap: nowrap; }
+.nav-row a, .more-menu a { color: var(--ink); text-decoration: none; font-size: 16px; white-space: nowrap; cursor: pointer; }
+.nav-row a:hover, .more-menu a:hover { color: var(--ink); text-decoration: none; }
+
+/* Side drawer: opens over the whole right side of the page when the burger
+   is clicked. Hidden by default, slides in via a transform. */
+.more-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 84vw);
+  margin: 0;
+  padding: 64px 20px 20px;
+  list-style: none;
+  background: var(--paper);
+  border-left: 1px solid var(--line);
+  box-shadow: -8px 0 24px rgba(0,0,0,0.12);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 60;
+  overflow-y: auto;
+}
+.site-nav.open .more-menu { transform: translateX(0); }
+.more-menu a { display: block; padding: 12px 14px; border-radius: 6px; font-size: 17px; }
+.more-menu a:hover { background: #f3efe6; }
+
+.drawer-close {
+  position: absolute;
+  top: 14px; right: 16px;
+  background: none; border: 0;
+  font-size: 28px; line-height: 1;
+  color: var(--ink); cursor: pointer;
+}
+
+/* The first five entries duplicate the visible nav row; on desktop (where the
+   row is shown) they are hidden in the drawer, on mobile (row hidden) they
+   appear. */
+.more-menu li[data-dupe="1"] { display: none; }
+
+/* Backdrop dims the page behind the open drawer. */
+.site-nav.open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.28);
+  z-index: 55;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 40px; height: 32px;
+  background: none; border: 0; padding: 0;
+  cursor: pointer;
+}
+.nav-toggle span { display: block; height: 2px; width: 22px; background: var(--ink); margin: 0 auto; }
 
 /* Small introduction hero, before the calendar */
 .intro {
@@ -71,7 +143,7 @@ body {
 }
 .intro p .dropcap {
   font-family: "Iowan Old Style", Palatino, Georgia, serif;
-  font-size: 56px; line-height: 0.85;
+  font-size: 66px; line-height: 1.03;   /* ~2 lines of body text tall */
   font-weight: 700; color: var(--crimson);
   flex: 0 0 auto;
 }
@@ -93,6 +165,15 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .page-intro { max-width: 620px; margin: 0 auto 24px; text-align: center; color: var(--muted); font-size: 18px; }
 .page-col { max-width: 640px; margin: 0 auto; text-align: left; }
 
+/* Larger sub-section heading with breathing room (e.g. on the donations page). */
+.section-sub { font-size: 26px; margin: 40px 0 14px; }
+
+/* Row of buttons displayed inline (side by side). */
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 16px 0; }
+
+/* Bank details revealed by the "Show bank details" button. */
+.bank-details { margin-top: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+
 .cal-section { text-align: center; }
 .cal-section h2 { text-align: center; }
 .cal-wrap { max-width: 680px; margin: 0 auto; text-align: left; }
@@ -113,6 +194,32 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 /* Announcements */
 .announce { border-left: 3px solid var(--crimson); padding: 12px 16px; }
 
+/* Card variants for the weekly calendar and announcements. */
+.cards { display: flex; flex-wrap: wrap; gap: 18px; }
+.card {
+  flex: 1 1 300px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+}
+.card h3 { font-size: 18px; margin: 0 0 12px; }
+
+/* The whole weekly calendar is one full-width card. */
+.card.calendar-card { flex: 1 1 100%; }
+.card.calendar-card .cal { border-top: 0; }
+.card .cal-day { padding: 10px 0; }
+.card .cal-date { min-width: 96px; }
+.card .svc { font-size: 15px; }
+
+/* Announcements: a title above a list of stacked cards. */
+.announcements { display: flex; flex-direction: column; gap: 14px; }
+.card.announce-card {
+  border-top: 4px solid var(--crimson);
+  flex: 0 0 auto;   /* size to content, don't stretch vertically */
+}
+.card.announce-card p { margin: 0; font-size: 16px; }
+
 /* Churches: clickable cards to Google Maps */
 .churches { display: flex; flex-wrap: wrap; gap: 14px; }
 .church {
@@ -123,6 +230,29 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .church:hover { border-color: var(--crimson); }
 .church h3 { margin: 0 0 6px; }
 
+/* Church blocks on the "Our churches" page */
+.church-block { border-bottom: 1px solid var(--line); padding: 0 0 20px; margin-bottom: 20px; }
+.church-block:last-child { border-bottom: 0; }
+.church-block h3 { margin: 0 0 2px; }
+.church-block p { margin: 8px 0; }
+.church-block a { color: var(--crimson); text-decoration: none; }
+
+/* Clergy cards on the "Clergy" page */
+.clergy-card { border: 1px solid var(--line); border-radius: 10px; background: #fff; padding: 18px; margin-bottom: 16px; }
+.clergy-card h3 { margin: 0 0 6px; font-size: 19px; }
+.clergy-card p { margin: 6px 0; }
+.clergy-card a { color: var(--crimson); text-decoration: none; }
+.clergy-card a:hover { text-decoration: underline; }
+
+/* News list and items */
+.news-list { display: flex; flex-direction: column; }
+.news-item { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.news-item:last-child { border-bottom: 0; }
+.news-item h3 { margin: 0 0 4px; font-size: 17px; }
+.news-item h3 a, .news-item a { color: var(--ink); text-decoration: none; }
+.news-item h3 a:hover { text-decoration: underline; }
+.news-item time { font-size: 14px; }
+.church-block a:hover { text-decoration: underline; }
 /* Wishlist */
 .item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .item input { width: 18px; height: 18px; }
@@ -132,6 +262,32 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .btn { display: inline-block; background: var(--crimson); color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 6px; border: 0; font-size: 16px; cursor: pointer; }
 .btn.ghost { background: #fff; color: var(--crimson); border: 1px solid var(--crimson); }
 
+/* Bookstore (honesty box) */
+.bookshop-fields { display: flex; gap: 12px; flex-wrap: nowrap; align-items: end; }
+.bookshop-fields label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--muted); flex: 0 0 auto; }
+.bookshop-fields input {
+  font-size: 16px; padding: 8px 10px; border: 1px solid var(--line);
+  border-radius: 6px; background: #fff; color: var(--ink); min-width: 0;
+}
+.bookshop-fields input.title { flex: 1 1 auto; min-width: 120px; }
+.bookshop-fields label:nth-child(2) { flex: 0 0 100px; }
+.bookshop-fields label:nth-child(3) { flex: 0 0 90px; }
+.bookshop-fields input.title { width: 100%; }
+.bookshop-fields .bookshop-add { flex: 0 0 auto; }
+
+/* Bookstore total bar: not sticky, sits below the rows. */
+.bookshop-total { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+
+/* Bookstore cart rows */
+.rows { margin-top: 16px; }
+.row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px;
+}
+.row .rt { flex: 1; }
+.row .rp { font-weight: 700; min-width: 70px; }
+.row .rq { min-width: 24px; color: var(--muted); }
+
 /* FAQ */
 .faq dt { font-weight: 700; margin-top: 16px; }
 .faq dd { margin: 4px 0 0; color: var(--muted); }
@@ -140,20 +296,9 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .site-foot { border-top: 1px solid var(--line); padding: 20px; color: var(--muted); font-size: 14px; }
 .site-foot a { color: var(--crimson); text-decoration: none; }
 
-/* Staged nav collapse: the tail links hide progressively as the viewport
-   narrows, so the title stays on one line and essentials remain; below the
-   last stage the burger replaces everything. */
-@media (max-width: 1199px) {
-  .site-nav li:nth-child(n+9) { display: none; }  /* FAQ, History */
-}
-@media (max-width: 1049px) {
-  .site-nav li:nth-child(n+7) { display: none; }  /* + Magazine, Wishlist */
-}
-@media (max-width: 919px) {
-  .site-nav ul { display: none; }
-  .nav-toggle { display: block; }
-  .cal-day { flex-direction: column; gap: 4px; }
-}
+/* The site-nav is the positioning context for the more-menu dropdown. */
+.site-nav { position: relative; }
+
 @media (max-width: 560px) {
   .brand {
     font-size: 20px;
@@ -162,4 +307,29 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
     flex-shrink: 1;        /* let it shrink so the burger stays visible */
   }
   .brand img { height: 30px; }
+  .cal-day { flex-direction: column; gap: 4px; }
+
+  /* On phones let the dropcap sit inline and wrap around it. */
+  .intro p { display: block; }
+  .intro p .dropcap {
+    float: left;
+    font-size: 58px;
+    line-height: 0.95;
+    margin-right: 6px;
+  }
+
+  /* Bookstore fields stack on phones so they fit the width. */
+  .bookshop-fields { flex-wrap: wrap; }
+  .bookshop-fields label { flex: 1 1 100%; }
+  .bookshop-fields label:nth-child(2), .bookshop-fields label:nth-child(3) { flex: 1 1 40%; }
+  .bookshop-fields .bookshop-add { flex: 1 1 100%; }
+}
+
+/* Tablets and below: fold the whole nav row into the burger so nothing
+   overflows; the burger dropdown then carries every link, including the
+   duplicates that are only hidden on desktop. */
+@media (max-width: 919px) {
+  .nav-row { display: none; }
+  .more-menu { min-width: 220px; }
+  .more-menu li[data-dupe="1"] { display: list-item; }
 }

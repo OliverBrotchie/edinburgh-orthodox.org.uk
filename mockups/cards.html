@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>St Andrew's Orthodox Church - homepage (mockup)</title>
+<title>St Andrew's Orthodox Church - card variant (mockup)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,16 +43,16 @@
 </header>
 
 <div class="intro">
-  <p><span class="dropcap">W</span><span class="text">elcome to <strong>St Andrew's Orthodox Church</strong> - Archdiocese of Thyateira and Great Britain. All are welcome!</span></p>
+  <p><span class="dropcap">W</span><span class="text">elcome to <strong>St Andrew's Orthodox Church</strong> &mdash; Archdiocese of Thyateira and Great Britain. All are welcome!</span></p>
 </div>
 
 <div class="wrap">
 
-  <section class="cal-section">
+  <section>
     <h2>Weekly Services</h2>
-    <div class="cal-wrap">
-      <div class="cal">
 
+    <div class="card calendar-card">
+      <div class="cal">
         <div class="cal-day">
           <div class="cal-date">Mon 7 <small>Forefeast of the Nativity</small></div>
           <div class="cal-body">
@@ -61,7 +61,6 @@
             <span class="svc">Supplicatory Canon 7:00pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Tue 8 <small>Nativity of the Mother of God</small></div>
           <div class="cal-body">
@@ -69,7 +68,6 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Wed 9 <small>Strict fast <span class="mark cross">✚</span></small></div>
           <div class="cal-body">
@@ -77,7 +75,6 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Thu 10</div>
           <div class="cal-body">
@@ -85,7 +82,6 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Fri 11 <small>Wine &amp; oil <span class="mark oil">🍇</span></small></div>
           <div class="cal-body">
@@ -93,7 +89,6 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Sat 12 <small>Fish <span class="mark fish">🐟</span></small></div>
           <div class="cal-body">
@@ -102,7 +97,6 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
         <div class="cal-day">
           <div class="cal-date">Sun 13 <small>Archangel Michael &amp; St Bega</small></div>
           <div class="cal-body">
@@ -112,16 +106,27 @@
             <span class="svc">Vespers 6:30pm <span class="loc">(Meadow Lane)</span></span>
           </div>
         </div>
-
       </div>
-      <p class="muted">Edited in Google Calendar. A "copy this week" button produces the plain text to post to WhatsApp, Facebook, and email.</p>
     </div>
+
+    <p class="muted">Edited in Google Calendar. A "copy this week" button produces the plain text to post to WhatsApp, Facebook, and email.</p>
   </section>
 
   <section>
     <h2>Announcements</h2>
-    <div class="announce">
-      <p>Bishop Raphael will hear confessions on Wednesday afternoon from 2pm to 5pm. Please speak to Antigoni about registering for the 26th September conference.</p>
+    <div class="announcements">
+      <div class="card announce-card">
+        <h3>Confessions this week</h3>
+        <p>Bishop Raphael will hear confessions on Wednesday afternoon from 2pm to 5pm.</p>
+      </div>
+      <div class="card announce-card">
+        <h3>September conference</h3>
+        <p>Please speak to Antigoni about registering for the 26th September conference.</p>
+      </div>
+      <div class="card announce-card">
+        <h3>Choir practice</h3>
+        <p>Choir practice this Wednesday evening at 7:30pm at Meadow Lane.</p>
+      </div>
     </div>
   </section>
 
@@ -144,39 +149,9 @@
     <p><a href="churches.html">See all our churches</a></p>
   </section>
 
-  <section>
-    <h2>Our history</h2>
-    <p>The community has worshipped in Edinburgh since 1948, when Archpriest John Sotnikov, a Russian Chaplain of the Polish Army, began holding services here.</p>
-    <p><a href="#">Find out more about our history</a>.</p>
-  </section>
-
-  <section>
-    <h2><a href="news.html">Recent news</a></h2>
-    <div class="news-list">
-      <article class="news-item">
-        <h3><a href="news.html">Ordination to the Holy Priesthood of Deacon Caius Anton Gurgu</a></h3>
-        <time class="muted">18 December 2023</time>
-      </article>
-      <article class="news-item">
-        <h3><a href="news.html">Homes for Ukraine</a></h3>
-        <time class="muted">16 March 2022</time>
-      </article>
-      <article class="news-item">
-        <h3><a href="news.html">Anton Caius Gurgu ordained to the Holy Diaconate</a></h3>
-        <time class="muted">24 January 2023</time>
-      </article>
-    </div>
-    <p><a href="news.html">All news</a></p>
-  </section>
-
 </div>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <a href="#">History</a> <a href="#">Confessions</a> <a href="#">Magazine</a> <a href="wishlist.html">Wishlist</a> <a href="faq.html">FAQ</a> <a href="donations.html">Donations</a>
-  </div>
-</footer>
-
+<footer class="site-foot"><div class="wrap">This is a visual mockup, not the real website.</div></footer>
 <script src="site.js"></script>
 </body>
 </html>
