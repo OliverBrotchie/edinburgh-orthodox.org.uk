@@ -305,9 +305,53 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .row .rp { font-weight: 700; min-width: 70px; }
 .row .rq { min-width: 24px; color: var(--muted); }
 
-/* FAQ */
-.faq dt { font-weight: 700; margin-top: 16px; }
-.faq dd { margin: 4px 0 0; color: var(--muted); }
+/* FAQ: collapsible question-and-answer list. Native <details>/<summary>,
+   accented with the site's crimson on the border and open state. */
+.faq { max-width: 720px; margin: 0 auto; text-align: left; display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.faq details:hover { border-color: var(--crimson); }
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--crimson);
+  transition: transform 0.2s ease;
+}
+.faq summary:focus-visible { outline: 2px solid var(--crimson); outline-offset: 2px; }
+.faq details[open] { border-color: var(--crimson); }
+.faq details[open] > summary {
+  color: var(--crimson);
+  border-bottom: 1px solid var(--line);
+}
+.faq details[open] > summary::after { transform: rotate(45deg); }
+.faq-answer {
+  padding: 16px 18px 18px;
+  border-left: 3px solid var(--crimson);
+}
+.faq-answer p { margin: 0 0 12px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { color: var(--crimson); text-decoration: underline; }
 
 /* Footer */
 .site-foot { border-top: 1px solid var(--line); padding: 32px 24px 40px; color: var(--muted); font-size: 14px; }

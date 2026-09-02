@@ -43,7 +43,6 @@ The filename becomes the URL. For example, `parish-feast.md` is published at
 Most pages are plain Markdown files under `content/`:
 
 - `content/clergy.md`
-- `content/faq.md`
 - Future pages such as `content/history.md`
 
 Structured information is kept in `data/` when templates reuse it:
@@ -51,6 +50,7 @@ Structured information is kept in `data/` when templates reuse it:
 - `data/churches.yaml` supplies the homepage and Our Churches page.
 - `data/home.yaml` supplies services and announcements.
 - `data/wishlist.yaml` supplies wishlist names and prices.
+- `data/faq.yaml` supplies the FAQ questions and answers.
 
 Navigation links are defined once in `hugo.toml` under `menus.main`.
 
