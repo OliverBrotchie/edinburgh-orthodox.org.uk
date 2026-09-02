@@ -1,0 +1,9 @@
+# TODO: Ask the site owner to confirm item names, availability, and prices.
+- name: Iconostasis
+  price: 500
+- name: Altar table
+  price: 300
+- name: Set of festal icons
+  price: 250
+- name: Candlestands
+  price: 120

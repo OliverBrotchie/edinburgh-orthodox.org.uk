@@ -1,0 +1,30 @@
+{{/* Renders data/wishlist.yaml and loads wishlist.js to calculate the selected total. */}}
+{{ define "main" }}
+    <div class="wrap">
+        <section class="page-section">
+            <h1>{{ .Title }}</h1>
+            <p class="page-intro">Support the furnishing of our new church at Craigmillar Park. Pick one or more items, then donate the total in a single payment through Square.</p>
+
+            <div class="page-col">
+                {{ range hugo.Data.wishlist }}
+                    <label class="item">
+                        <input type="checkbox">
+                        <span class="name">{{ .name }}</span>
+                        <span class="price">£{{ .price }}</span>
+                    </label>
+                {{ end }}
+
+                {{/* TODO: Connect the selected items and total to a confirmed Square checkout URL. */}}
+                <div class="total-bar">
+                    <span>Selected: <strong id="wishlist-total">£0.00</strong></span>
+                    <span class="btn" role="link" aria-disabled="true" title="The donation link needs confirmation from the site owner">Donate selected items</span>
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}
+
+{{ define "scripts" }}
+    {{ $script := resources.Get "js/wishlist.js" | js.Build (dict "minify" true "targetPath" "js/wishlist.js") | fingerprint }}
+    <script type="module" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}
