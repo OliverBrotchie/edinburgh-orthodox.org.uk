@@ -293,8 +293,13 @@ h3 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 20px; 
 .faq dd { margin: 4px 0 0; color: var(--muted); }
 
 /* Footer */
-.site-foot { border-top: 1px solid var(--line); padding: 20px; color: var(--muted); font-size: 14px; }
+.site-foot { border-top: 1px solid var(--line); padding: 32px 24px 40px; color: var(--muted); font-size: 14px; }
+.site-foot .foot-inner { max-width: 860px; margin: 0 auto; }
+.site-foot .foot-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 18px; }
 .site-foot a { color: var(--crimson); text-decoration: none; }
+.site-foot a:hover { text-decoration: underline; }
+.site-foot .foot-contact { margin-bottom: 6px; }
+.site-foot .foot-contact a { color: var(--ink); }
 
 /* The site-nav is the positioning context for the more-menu dropdown. */
 .site-nav { position: relative; }
