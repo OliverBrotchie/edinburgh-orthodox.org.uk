@@ -48,8 +48,6 @@ Members of the congregation gather for refreshments and fellowship after the ser
 
 You are welcome to attend our services and speak with a member of the clergy. We can recommend books, talks, and other resources suited to your questions and background. Those wishing to explore the faith more deeply may also attend catechetical instruction without any obligation to join the Church.
 
-For a structured introduction, we recommend *The Orthodox Faith* book series by Protopresbyter Thomas Hopko, found for free [on the Orthodox Church in America website](https://www.oca.org/orthodoxy/the-orthodox-faith).
-
 ## 10. How do I become an Orthodox Christian?
 
 The journey normally begins by attending services and speaking with a member of the clergy. Those interested in joining the Church spend time learning about the Orthodox faith, participating in parish life, and preparing through a period of instruction called catechesis.
