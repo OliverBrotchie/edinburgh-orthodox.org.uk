@@ -1,0 +1,46 @@
+---
+const links = [
+    { href: "/", label: "Home" },
+    { href: "/churches", label: "Our Churches" },
+    { href: "/wishlist", label: "Wishlist" },
+    { href: "/donations", label: "Donations" },
+    { href: "/clergy", label: "Clergy" },
+    { href: "/news", label: "News" },
+    { href: "/faq", label: "FAQ" },
+    { href: "#", label: "Confessions" },
+    { href: "#", label: "Magazine" },
+    { href: "/history", label: "History" },
+    {
+        href: "https://saintandrewsorthodoxchurchschool.org.uk/",
+        label: "Orthodox School",
+        external: true,
+    },
+];
+---
+
+<footer class="site-foot">
+    <div class="foot-inner">
+        <div class="foot-links">
+            {
+                links.map((link) => (
+                    <a
+                        href={link.href}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener" : undefined}
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+        </div>
+
+        <p class="foot-contact">
+            Contact:
+            <a href="mailto:secretary@edinburgh-orthodox.org.uk">
+                secretary@edinburgh-orthodox.org.uk
+            </a>
+        </p>
+
+        <p>Orthodox Community of St Andrew, Edinburgh · Charity SC054378</p>
+    </div>
+</footer>

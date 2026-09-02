@@ -1,0 +1,10 @@
+{
+  "name": "edinburgh-orthodox-website-project",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix website run dev -- --background",
+    "build": "npm --prefix website run build",
+    "preview": "npm --prefix website run preview",
+    "astro": "npm --prefix website run astro --"
+  }
+}

@@ -1,0 +1,35 @@
+---
+interface NewsItem {
+    title: string;
+    date: Date;
+    href: string;
+}
+
+interface Props {
+    items: NewsItem[];
+}
+
+const { items } = Astro.props;
+const dateFormatter = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+});
+---
+
+<div class="news-list">
+    {
+        items.map((item) => (
+            <article class="news-item">
+                <h3>
+                    <a href={item.href}>{item.title}</a>
+                </h3>
+
+                <time class="muted" datetime={item.date.toISOString()}>
+                    {dateFormatter.format(item.date)}
+                </time>
+            </article>
+        ))
+    }
+</div>

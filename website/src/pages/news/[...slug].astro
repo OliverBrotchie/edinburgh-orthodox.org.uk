@@ -1,0 +1,50 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/layout.astro";
+
+interface Props {
+    post: CollectionEntry<"news">;
+}
+
+export async function getStaticPaths() {
+    const posts: CollectionEntry<"news">[] = await getCollection(
+        "news",
+        ({ data }: CollectionEntry<"news">) => !data.draft,
+    );
+
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const formattedDate = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+}).format(post.data.publishedAt);
+---
+
+<Layout title={`${post.data.title} | St Andrew's Orthodox Church`}>
+    <article class="wrap news-post">
+        <header>
+            <p><a href="/news/">News</a></p>
+            <h1>{post.data.title}</h1>
+            <time datetime={post.data.publishedAt.toISOString()}
+                >{formattedDate}</time
+            >
+            {
+                post.data.description && (
+                    <p class="news-summary">{post.data.description}</p>
+                )
+            }
+        </header>
+
+        <div class="news-content">
+            <Content />
+        </div>
+    </article>
+</Layout>

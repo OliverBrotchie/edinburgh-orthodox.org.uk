@@ -1,0 +1,251 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../layouts/layout.astro";
+import ServiceCalendar from "../components/service_calendar.astro";
+import ChurchCard from "../components/church_card.astro";
+import NewsList from "../components/newslist.astro";
+
+const services = [
+    {
+        date: "Mon 7",
+        note: "Forefeast of the Nativity",
+        services: [
+            {
+                time: "Matins 7:30am",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Supplicatory Canon 7:00pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Tue 8",
+        note: "Nativity of the Mother of God",
+        services: [
+            {
+                time: "Matins 7:30am",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Wed 9",
+        note: "Strict fast",
+        mark: "✚",
+        markClass: "cross",
+        services: [
+            {
+                time: "Matins 7:30am",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Thu 10",
+        services: [
+            {
+                time: "Matins 7:30am",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Fri 11",
+        note: "Wine & oil",
+        mark: "🍇",
+        markClass: "oil",
+        services: [
+            {
+                time: "Matins 7:30am",
+                location: "Meadow Lane",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Sat 12",
+        note: "Fish",
+        mark: "🐟",
+        markClass: "fish",
+        services: [
+            {
+                time: "Matins 8:30am",
+                location: "Chapel Street",
+            },
+            {
+                time: "Divine Liturgy 10:00am",
+                location: "Chapel Street",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+
+    {
+        date: "Sun 13",
+        note: "Archangel Michael & St Bega",
+        services: [
+            {
+                time: "Matins 8:30am",
+                location: "Chapel Street",
+            },
+            {
+                time: "Divine Liturgy 10:00am",
+                location: "Chapel Street",
+            },
+            {
+                time: "Catechesis 4:00pm",
+                location: "Chapel Street",
+            },
+            {
+                time: "Vespers 6:30pm",
+                location: "Meadow Lane",
+            },
+        ],
+    },
+];
+
+const churches = [
+    {
+        name: "Meadow Lane",
+        address:
+            "2 Meadow Lane, Edinburgh, EH8 9NR. Daily and smaller services.",
+        href: "https://www.google.com/maps/place/The+Orthodox+Community+Of+St+Andrew+-+Edinburgh+(Meadow+Lane)/@55.9421515,-3.1864247,547m/data=!3m1!1e3!4m15!1m8!3m7!1s0x4887c783ad530fa3:0x649f1f9e800bc04f!2s2+Meadow+Ln.,+Edinburgh+EH8+9NR!3b1!8m2!3d55.9421515!4d-3.1864247!16s%2Fg%2F11c27_p0sx!3m5!1s0x4887c783ad5323f3:0x8d3f2bb50da812f0!8m2!3d55.9421515!4d-3.1864247!16s%2Fg%2F1tcww953?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+    },
+
+    {
+        name: "Chapel Street",
+        address:
+            "33 Chapel Street, Edinburgh, EH8 9AY. Sundays and large feasts.",
+        href: "https://www.google.com/maps/place/The+Orthodox+Community+Of+St+Andrew+-+Edinburgh+(Chapel+Street)/@55.9424837,-3.186287,493m/data=!3m1!1e3!4m15!1m8!3m7!1s0x4887c783ad530fa3:0x649f1f9e800bc04f!2s2+Meadow+Ln.,+Edinburgh+EH8+9NR!3b1!8m2!3d55.9421515!4d-3.1864247!16s%2Fg%2F11c27_p0sx!3m5!1s0x4887c70b92e5a37f:0x2511b7984a197640!8m2!3d55.9438329!4d-3.1854681!16s%2Fg%2F11h248_mkb?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+    },
+
+    {
+        name: "Craigmillar Park",
+        address: "2c Craigmillar Park, Edinburgh. Our future main church.",
+        href: "https://www.google.com/maps/place/Craigmillar+Park+Church/@55.9307948,-3.1719393,55m/data=!3m1!1e3!4m15!1m8!3m7!1s0x4887c783ad530fa3:0x649f1f9e800bc04f!2s2+Meadow+Ln.,+Edinburgh+EH8+9NR!3b1!8m2!3d55.9421515!4d-3.1864247!16s%2Fg%2F11c27_p0sx!3m5!1s0x4887b882fce6bfb1:0xcfc33dce7b61f8ca!8m2!3d55.9307446!4d-3.1717745!16s%2Fm%2F0lpy8hc?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+    },
+];
+
+const posts: CollectionEntry<"news">[] = await getCollection(
+    "news",
+    ({ data }: CollectionEntry<"news">) => !data.draft,
+);
+const news = posts
+    .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
+    .slice(0, 3)
+    .map((post) => ({
+        title: post.data.title,
+        date: post.data.publishedAt,
+        href: `/news/${post.id}/`,
+    }));
+---
+
+<Layout title="St Andrew's Orthodox Church">
+    <div class="intro">
+        <p>
+            <span class="dropcap">W</span>
+            <span class="text">
+                elcome to <strong>St Andrew's Orthodox Church</strong> - Archdiocese
+                of Thyateira and Great Britain. All are welcome!
+            </span>
+        </p>
+    </div>
+
+    <div class="wrap">
+        <!-- Weekly Services -->
+        <ServiceCalendar days={services} />
+
+        <!-- Announcements -->
+        <section>
+            <h2>Announcements</h2>
+
+            <div class="announce">
+                <p>
+                    Bishop Raphael will hear confessions on Wednesday afternoon
+                    from 2pm to 5pm. Please speak to Antigoni about registering
+                    for the 26th September conference.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Churches -->
+        <section>
+            <h2>
+                <a href="/churches">Our Churches</a>
+            </h2>
+
+            <div class="churches">
+                {
+                    churches.map((church) => (
+                        <ChurchCard
+                            name={church.name}
+                            address={church.address}
+                            href={church.href}
+                        />
+                    ))
+                }
+            </div>
+
+            <p>
+                <a href="/churches">See all our churches</a>
+            </p>
+        </section>
+
+        <!-- History -->
+        <section>
+            <h2>Our history</h2>
+
+            <p>
+                The community has worshipped in Edinburgh since 1948, when
+                Archpriest John Sotnikov, a Russian Chaplain of the Polish Army,
+                began holding services here.
+            </p>
+
+            <p>
+                <a href="/history"> Find out more about our history </a>.
+            </p>
+        </section>
+
+        <!-- Recent News -->
+        <section>
+            <h2>
+                <a href="/news">Recent news</a>
+            </h2>
+
+            <NewsList items={news} />
+
+            <p>
+                <a href="/news">All news</a>
+            </p>
+        </section>
+    </div>
+</Layout>
