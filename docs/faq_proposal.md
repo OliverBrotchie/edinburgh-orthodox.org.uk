@@ -20,7 +20,7 @@ Our services are primarily in English, though Greek, Church Slavonic, and Romani
 
 ## 4. Is there a dress code?
 
-There is no formal dress code, but we ask everyone to dress modestly and respectfully, as they would when visiting any sacred place. Please avoid wearing shorts and, where possible, choose a top that covers the shoulders and upper arms. Clothing does not need to be expensive or especially formal.
+There is no formal dress code, but we ask everyone to dress modestly and respectfully, as they would when visiting any sacred place. Please avoid wearing shorts and, where possible, choose a long sleeved shirt. Clothing does not need to be expensive or especially formal.
 
 Customs concerning head coverings vary among Orthodox parishes. In our community, head coverings are welcome but not required.
 
