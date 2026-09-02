@@ -10,7 +10,7 @@ Visitors may join in the prayers and venerate the icons if they wish, but they a
 
 ## 2. What should I expect at my first Divine Liturgy?
 
-The Divine Liturgy is the principal worship service of the Orthodox Church. It includes hymns, prayers, readings from Scripture, a homily, and Holy Communion. You may also encounter incense, icons, candles, processions, and chanted responses.
+The Divine Liturgy is the principal worship service of the Orthodox Church. It includes hymns, prayers, readings from Scripture, a homily, and Holy Communion (refer to question 6). You may also encounter incense, icons, candles, processions, and chanted responses.
 
 The congregation may stand for much of the Liturgy, but visitors are welcome to sit whenever necessary. You are not expected to know all the prayers or customs. Simply observe, pray, and participate to the extent that you feel comfortable. Please introduce yourself to a clergy member or another parishioner after the service.
 
@@ -20,7 +20,7 @@ Our services are primarily in English, though Greek, Church Slavonic, and Romani
 
 ## 4. Is there a dress code?
 
-There is no formal dress code, but we ask everyone to dress modestly and respectfully, as they would when entering a sacred place. Clothing does not need to be expensive or especially formal.
+There is no formal dress code, but we ask everyone to dress modestly and respectfully, as they would when visiting any sacred place. Please avoid wearing shorts and, where possible, choose a top that covers the shoulders and upper arms. Clothing does not need to be expensive or especially formal.
 
 Customs concerning head coverings vary among Orthodox parishes. In our community, head coverings are welcome but not required.
 
@@ -32,17 +32,17 @@ As a general guide, worshippers usually stand during the Gospel reading, the Cre
 
 ## 6. May non-Orthodox visitors receive Holy Communion?
 
-We kindly ask non-Orthodox visitors to refrain from receiving Holy Communion. In the Orthodox Church, Communion is received by Orthodox Christians who are properly prepared and in good standing with the Church.
+We kindly ask visitors who are not Orthodox Christians not to receive Holy Communion. In the Orthodox Church, Holy Communion is received by Orthodox Christians who have been formally received into the Church through Baptism and Chrismation, or through Chrismation alone, and who are properly prepared and in good standing with the Church.
 
-This practice is not a judgment of our visitors’ faith or sincerity. Rather, receiving Holy Communion expresses full unity in the Orthodox faith. Visitors are warmly invited to remain for the entire service and to receive the blessed bread (antidoron) distributed at its conclusion.
+This practice is not a judgment of our visitors' faith or sincerity. Rather, receiving Holy Communion expresses full unity in the Orthodox faith. Visitors are warmly invited to remain for the entire service and to receive the blessed bread (antidoron) distributed at its conclusion.
 
 ## 7. May non-Orthodox Christians go to Confession?
 
-Sacramental Confession and absolution are reserved for Orthodox Christians. However, anyone may ask to speak privately with the priest for pastoral guidance, prayer, or help with a spiritual concern.
+Sacramental Confession and absolution are reserved for Orthodox Christians. However, anyone may ask to speak privately with a member of the clergy for pastoral guidance, prayer, or help with a spiritual concern.
 
 ## 8. What happens after the service?
 
-Members of the congregation gather for refreshments and fellowship after the service. Visitors are warmly invited to stay, meet the clergy and parishioners, and ask questions. There is no obligation to remain if you need to leave.
+Members of the congregation gather for refreshments and fellowship after the service. When a hall is available, everyone will move there together after the service. Visitors are warmly invited to stay, meet the clergy and parishioners, and ask questions. There is no obligation to remain if you need to leave.
 
 ## 9. How can I learn more about the Orthodox faith?
 
@@ -52,9 +52,9 @@ You are welcome to attend our services and speak with a member of the clergy. We
 
 The journey normally begins by attending services and speaking with a member of the clergy. Those interested in joining the Church spend time learning about the Orthodox faith, participating in parish life, and preparing through a period of instruction called catechesis.
 
-When a person is ready, they are received into the Church through Baptism and Chrismation or, in some circumstances, through Chrismation alone, according to the direction of the bishop. The process is personal and is not rushed. Please speak with a member of the clergy if you would like to begin.
+When a person is ready, they are received into the Church through Baptism and Chrismation or, in some circumstances, through Chrismation alone, according to the direction of the bishop. The process is personal and is not rushed. It may take up to a year, with an emphasis on building a strong foundation in Orthodox Christian life and developing a relationship with a spiritual father, a priest who provides ongoing spiritual guidance, rather than on intellectual understanding alone. Please speak with a member of the clergy if you would like to begin.
 
-## 11. How do I become a member of this parish?
+## 11. How do I become a registered legal member of the church charity?
 
 Orthodox Christians above the age of 18 who have attended our services for at least six months may [apply to become registered parish members](https://forms.cloud.microsoft/pages/responsepage.aspx?id=vPEYq317pk6fUNweLEkwAvXUGwYznFRHrgDvDXxHsj5UMlpXU0JURVZINFRYVVVXTEFUTjlaQ1dGNy4u&route=shorturl).
 
@@ -62,4 +62,4 @@ Registered members may vote at Annual General Meetings and Special General Meeti
 
 ## 12. How can I receive parish announcements?
 
-Announcements are published on the home page of our website. You may also speak with a member of the clergy or the Community Committee to ask to be added to the parish WhatsApp announcements group.
+Announcements can be receieved by signing up to our mailing list and are also published on the home page of our website. You may also speak with a member of the clergy or the Community Committee to ask to be added to the parish WhatsApp announcements group.
