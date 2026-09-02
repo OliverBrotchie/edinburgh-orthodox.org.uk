@@ -1,0 +1,70 @@
+# TODO: Replace this sample week and announcement with current, confirmed information.
+# TODO: Decide whether this file remains the source or is generated from Google Calendar.
+announcement: >-
+  Bishop Raphael will hear confessions on Wednesday afternoon from 2pm to 5pm.
+  Please speak to Antigoni about registering for the 26th September conference.
+
+services:
+  - date: Mon 7
+    note: Forefeast of the Nativity
+    services:
+      - time: Matins 7:30am
+        location: Meadow Lane
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+      - time: Supplicatory Canon 7:00pm
+        location: Meadow Lane
+  - date: Tue 8
+    note: Nativity of the Mother of God
+    services:
+      - time: Matins 7:30am
+        location: Meadow Lane
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+  - date: Wed 9
+    note: Strict fast
+    mark: ✚
+    markClass: cross
+    services:
+      - time: Matins 7:30am
+        location: Meadow Lane
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+  - date: Thu 10
+    services:
+      - time: Matins 7:30am
+        location: Meadow Lane
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+  - date: Fri 11
+    note: Wine & oil
+    mark: 🍇
+    markClass: oil
+    services:
+      - time: Matins 7:30am
+        location: Meadow Lane
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+  - date: Sat 12
+    note: Fish
+    mark: 🐟
+    markClass: fish
+    services:
+      - time: Matins 8:30am
+        location: Chapel Street
+      - time: Divine Liturgy 10:00am
+        location: Chapel Street
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+  - date: Sun 13
+    note: Archangel Michael & St Bega
+    services:
+      - time: Matins 8:30am
+        location: Chapel Street
+      - time: Divine Liturgy 10:00am
+        location: Chapel Street
+      - time: Catechesis 4:00pm
+        location: Chapel Street
+      - time: Vespers 6:30pm
+        location: Meadow Lane
+
