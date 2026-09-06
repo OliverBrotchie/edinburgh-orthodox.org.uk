@@ -53,6 +53,18 @@ enableRobotsTXT = true
   [menus.main.params]
     primary = true
 
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 65
+  [menus.main.params]
+    primary = true
+
+[[menus.main]]
+  name = "Catechesis"
+  pageRef = "#"
+  weight = 66
+
 # TODO: Create content/confessions.md, then replace this placeholder URL with pageRef.
 [[menus.main]]
   name = "Confessions"
@@ -68,7 +80,7 @@ enableRobotsTXT = true
 # TODO: Create content/history.md, then replace this URL with pageRef.
 [[menus.main]]
   name = "History"
-  url = "/history/"
+  url = "#"
   weight = 90
 
 [[menus.main]]
