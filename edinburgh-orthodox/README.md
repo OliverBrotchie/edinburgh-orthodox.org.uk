@@ -59,3 +59,46 @@ Navigation links are defined once in `hugo.toml` under `menus.main`.
 The clergy contact details, church details, wishlist prices, donation URL, and bank details
 must be confirmed by the site owner before publication. Payment controls remain visibly
 disabled until confirmed.
+
+## TODO list
+
+A running list of open items in this implementation. Each one shows the file where the
+`TODO` comment lives.
+
+### Pages to create
+
+- [ ] Create `content/confessions.md`, then point the "Confessions" menu item at it (`hugo.toml`).
+- [ ] Create `content/magazine.md`, then point the "Magazine" menu item at it (`hugo.toml`).
+- [ ] Create `content/history.md`, then point the "History" menu item and the homepage history
+  link at it (`hugo.toml`, `layouts/home.html`).
+
+### Content to confirm with the site owner
+
+- [ ] Wishlist: confirm item names, availability, and prices (`data/wishlist.yaml`).
+- [ ] Home: replace the sample week and announcement with current, confirmed information
+  (`data/home.yaml`).
+- [ ] FAQ: replace filler questions and add appropriate links (`content/faq.md`).
+
+### Integrations to wire up
+
+- [ ] Replace the disabled "Donate now" control with the site owner's confirmed Square donation
+  URL (`layouts/_default/donations.html`).
+- [ ] Replace the bank-details placeholder with bank details confirmed by the site owner
+  (`layouts/_default/donations.html`).
+- [ ] Connect the bookstore total to a confirmed checkout process
+  (`layouts/_default/donations.html`).
+- [ ] Connect the wishlist items and total to a confirmed Square checkout URL
+  (`layouts/_default/wishlist.html`).
+- [ ] Replace the sample service data with Google Calendar and add the "copy this week" action
+  (`layouts/home.html`).
+
+### News posts to finish
+
+These posts are stubs. Add the original article body and any confirmed photographs to each.
+
+- [ ] `content/news/anton-caius-gurgu-ordained-holy-diaconate.md`
+- [ ] `content/news/homes-for-ukraine.md`
+- [ ] `content/news/ordination-bishop-raphael-of-ilion.md`
+- [ ] `content/news/ordination-deacon-janis-stumbris.md`
+- [ ] `content/news/ordination-holy-priesthood-caius-anton-gurgu.md`
+- [ ] `content/news/ordination-reader-caius-gurgu.md`
