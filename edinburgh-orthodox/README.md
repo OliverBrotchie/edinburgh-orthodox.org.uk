@@ -45,20 +45,15 @@ Most pages are plain Markdown files under `content/`:
 - `content/clergy.md`
 - Future pages such as `content/history.md`
 
-Structured information is kept in `data/` when templates reuse it:
+Structured information is kept in `data/` when needed for layout templates:
 
 - `data/churches.yaml` supplies the homepage and Our Churches page.
-- `data/home.yaml` supplies services and announcements.
+- `data/services.yaml` supplies the weekly services.
+- `data/announcements.yaml` supplies the weekly announcements.
 - `data/wishlist.yaml` supplies wishlist names and prices.
 - `data/faq.yaml` supplies the FAQ questions and answers.
 
 Navigation links are defined once in `hugo.toml` under `menus.main`.
-
-## Information requiring confirmation
-
-The clergy contact details, church details, wishlist prices, donation URL, and bank details
-must be confirmed by the site owner before publication. Payment controls remain visibly
-disabled until confirmed.
 
 ## TODO list
 
@@ -67,30 +62,27 @@ A running list of open items in this implementation. Each one shows the file whe
 
 ### Pages to create
 
+- [ ] Create `content/catechesis.md`, then point the "Catechesis" menu item at it (`hugo.toml`).
 - [ ] Create `content/confessions.md`, then point the "Confessions" menu item at it (`hugo.toml`).
 - [ ] Create `content/magazine.md`, then point the "Magazine" menu item at it (`hugo.toml`).
 - [ ] Create `content/history.md`, then point the "History" menu item and the homepage history
   link at it (`hugo.toml`, `layouts/home.html`).
 
-### Content to confirm with the site owner
+### Content to confirm
 
-- [ ] Wishlist: confirm item names, availability, and prices (`data/wishlist.yaml`).
-- [ ] Home: replace the sample week and announcement with current, confirmed information
-  (`data/home.yaml`).
-- [ ] FAQ: replace filler questions and add appropriate links (`content/faq.md`).
+- [ ] Wishlist: confirm items and update `data/wishlist.yaml`.
+- [ ] Donations: bank details and donation URL
+- [ ] Home: replace the sample week and announcement with real content
+  (`data/services.yaml`, `data/announcements.yaml`).
+- [ ] FAQ: replace filler questions and add appropriate links `content/faq.md` and `data/faq.yaml`.
 
 ### Integrations to wire up
 
-- [ ] Replace the disabled "Donate now" control with the site owner's confirmed Square donation
-  URL (`layouts/_default/donations.html`).
-- [ ] Replace the bank-details placeholder with bank details confirmed by the site owner
-  (`layouts/_default/donations.html`).
-- [ ] Connect the bookstore total to a confirmed checkout process
-  (`layouts/_default/donations.html`).
-- [ ] Connect the wishlist items and total to a confirmed Square checkout URL
-  (`layouts/_default/wishlist.html`).
+- [ ] Enable buttons on donation page (`layouts/_default/donations.html`).
+- [ ] Enable wishlist checkout button (`layouts/_default/wishlist.html`).
 - [ ] Replace the sample service data with Google Calendar and add the "copy this week" action
   (`layouts/home.html`).
+- [ ] Decide how to upload announcements and news posts (`data/announcements.yaml`, `content/news/`).
 
 ### News posts to finish
 

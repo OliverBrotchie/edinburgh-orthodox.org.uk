@@ -1,6 +1,7 @@
-{{/* Homepage using data/home.yaml, data/churches.yaml, and the three newest news posts. */}}
+{{/* Homepage using data/services.yaml, data/announcements.yaml, data/churches.yaml, and the three newest news posts. */}}
 {{ define "main" }}
-    {{ $home := hugo.Data.home }}
+    {{ $services := hugo.Data.services }}
+    {{ $announcements := hugo.Data.announcements }}
     {{ $churches := hugo.Data.churches }}
 
     <div class="intro">
@@ -16,7 +17,7 @@
             <h2>Weekly Services</h2>
             <div class="cal-wrap">
                 <div class="cal">
-                    {{ range $home.services }}
+                    {{ range $services }}
                         {{ $day := . }}
                         <div class="cal-day">
                             <div class="cal-date">
@@ -42,7 +43,7 @@
 
         <section>
             <h2>Announcements</h2>
-            <div class="announce"><p>{{ $home.announcement }}</p></div>
+            <div class="announce">{{ range $announcements }}<p>{{ . }}</p>{{ end }}</div>
         </section>
 
         <section>
