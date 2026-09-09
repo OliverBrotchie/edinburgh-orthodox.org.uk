@@ -10,15 +10,23 @@
                 <p>Our community is maintained entirely by the generosity of its members and friends. Every gift helps us keep the church open, care for our clergy, and carry on our work in Edinburgh.</p>
                 <p class="muted">You can give by bank transfer or online, as a one-off or a regular standing order.</p>
 
-                {{/* TODO: Replace the disabled control with the site owner's confirmed Square donation URL. */}}
                 <div class="btn-row">
-                    <span class="btn" role="link" aria-disabled="true" title="The donation link needs confirmation from the site owner">Donate now</span>
+                    <a class="btn" href="https://square.link/u/XKyKhLtq" target="_blank" rel="noopener">Donate now</a>
                     <button class="btn ghost" id="bank-toggle" type="button">Show bank details</button>
                 </div>
 
-                {{/* TODO: Replace this message with bank details confirmed by the site owner. */}}
                 <div id="bank-details" class="bank-details" hidden>
-                    <p class="muted">Bank details need confirmation from the site owner before publication.</p>
+                    <table>
+                        <tbody>
+                            <tr><th>Scottish Charity Number</th><td>{{ site.Params.charityNumber }}</td></tr>
+                            <tr><th>Bank Account name</th><td>The Edinburgh Orth Community St Andrew</td></tr>
+                            <tr><th>Bank Account at</th><td>Bank of Scotland</td></tr>
+                            <tr><th>Sort Code</th><td>80-02-34</td></tr>
+                            <tr><th>Account Number</th><td>0070 6868</td></tr>
+                            <tr><th>IBAN</th><td>GB82BOFS80023400706868</td></tr>
+                            <tr><th>BIC</th><td>BOFSGB21222</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

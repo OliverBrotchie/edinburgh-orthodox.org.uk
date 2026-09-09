@@ -6,6 +6,27 @@
   border-radius: 8px;
   background: #fff;
 }
+.bank-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bank-details th {
+  text-align: left;
+  font-weight: 400;
+  color: $muted;
+  font-size: 14px;
+  padding: 3px 16px 3px 0;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.bank-details td {
+  text-align: right;
+  font-weight: 600;
+  color: $ink;
+  padding: 3px 0;
+  vertical-align: top;
+}
+
 
 // Bookstore (honesty box)
 .bookshop-fields {
@@ -13,6 +34,7 @@
   gap: 12px;
   flex-wrap: nowrap;
   align-items: end;
+  justify-content: center;
 }
 .bookshop-fields label {
   display: flex;

@@ -5,6 +5,35 @@
   margin: 48px auto 8px;
   padding: 0 24px;
 }
+.intro-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.intro-logos .welcome-icon {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+.intro-logos .flank {
+  width: 64px;
+  height: auto;
+}
+.intro-overline {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $muted;
+  line-height: 1.5;
+}
+.intro-overline + .intro-overline {
+  margin-bottom: 12px;
+}
+
+
 .intro p {
   display: flex;
   align-items: flex-start;
@@ -150,7 +179,8 @@
 }
 .church {
   flex: 1 1 220px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid $line;
   background: #fff;
   text-decoration: none;
@@ -164,3 +194,10 @@
 .church h3 {
   margin: 0 0 6px;
 }
+.church-hint {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: $crimson;
+}
+
