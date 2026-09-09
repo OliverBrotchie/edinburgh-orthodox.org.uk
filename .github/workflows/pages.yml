@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build
-        run: hugo --source edinburgh-orthodox --minify --baseURL https://OliverBrotchie.github.io/edinburgh-orthodox.org.uk/
+        run: hugo --source edinburgh-orthodox --minify --baseURL https://edinburgh-orthodox.github.io/edinburgh-orthodox.org.uk/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
