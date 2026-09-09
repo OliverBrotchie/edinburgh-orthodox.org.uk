@@ -26,13 +26,6 @@ enableRobotsTXT = true
     primary = true
 
 [[menus.main]]
-  name = "Wishlist"
-  pageRef = "/wishlist"
-  weight = 30
-  [menus.main.params]
-    primary = true
-
-[[menus.main]]
   name = "Clergy"
   pageRef = "/clergy"
   weight = 40

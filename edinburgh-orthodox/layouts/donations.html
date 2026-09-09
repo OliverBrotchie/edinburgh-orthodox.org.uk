@@ -1,4 +1,4 @@
-{{/* Custom donation and bookshop page. Loads donations.js through the scripts block below. */}}
+{{/* Donation, bookshop, and wishlist page. Loads donations.js through the scripts block below. */}}
 {{ define "main" }}
     <div class="wrap">
         <section class="page-section">
@@ -46,8 +46,24 @@
         </section>
 
         <section class="page-section">
-            <h2>Give toward something specific</h2>
-            <p class="page-intro">To support a particular need of the new church, see the <a href="{{ "/wishlist/" | relURL }}">wishlist</a>.</p>
+            <h2>Wishlist</h2>
+            <p class="page-intro">Support the furnishing of our new church at Craigmillar Park. Pick one or more items, then donate the total in a single payment through Square.</p>
+
+            <div class="page-col">
+                {{ range hugo.Data.wishlist }}
+                    <label class="item">
+                        <input type="checkbox">
+                        <span class="name">{{ .name }}</span>
+                        <span class="price">£{{ .price }}</span>
+                    </label>
+                {{ end }}
+
+                {{/* TODO: Connect the selected items and total to a confirmed Square checkout URL. */}}
+                <div class="total-bar">
+                    <span>Selected: <strong id="wishlist-total">£0.00</strong></span>
+                    <span class="btn" role="link" aria-disabled="true" title="The donation link needs confirmation from the site owner">Donate selected items</span>
+                </div>
+            </div>
         </section>
     </div>
 {{ end }}

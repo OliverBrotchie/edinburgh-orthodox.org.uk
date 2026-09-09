@@ -8,7 +8,7 @@
         <link rel="icon" type="image/jpeg" href="{{ "images/red-logo-church.jpg?v=2" | relURL }}">
         <link rel="shortcut icon" type="image/jpeg" href="{{ "images/red-logo-church.jpg?v=2" | relURL }}">
         <link rel="apple-touch-icon" href="{{ "images/red-logo-church.jpg?v=2" | relURL }}">
-        {{ $styles := resources.Get "css/style.css" | minify | fingerprint }}
+        {{ $styles := resources.Get "css/main.scss" | css.Sass | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
         <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
     </head>
