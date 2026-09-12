@@ -35,25 +35,20 @@
 
 
 .intro p {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
   font-size: 20px;
   color: $ink;
   margin: 0;
-  line-height: 1.7;
-  text-align: left;
+  line-height: 1.25;
+  text-align: center;
 }
 .intro p .dropcap {
   font-family: $font-display;
   font-size: 66px;
-  line-height: 1.03;
+  line-height: 0.6;
+  vertical-align: middle;
   font-weight: 700;
   color: $crimson;
-  flex: 0 0 auto;
-}
-.intro p .text {
-  flex: 1;
 }
 .intro p strong {
   font-weight: 700;

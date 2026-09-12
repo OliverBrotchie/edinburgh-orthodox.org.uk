@@ -12,10 +12,7 @@
         </div>
         <div class="intro-overline">Ecumenical Patriarchate</div>
         <div class="intro-overline">Archdiocese of Thyateira and Great Britain</div>
-        <p>
-            <span class="dropcap">W</span>
-            <span class="text">elcome to <strong>St Andrew's Orthodox Church</strong>. All are welcome!</span>
-        </p>
+        <p><span class="dropcap">W</span>elcome to <strong>St Andrew's Orthodox Church</strong>. All&nbsp;are&nbsp;welcome!</p>
     </div>
 
     <div class="wrap">
@@ -67,18 +64,18 @@
             <p><a href="{{ "/churches/" | relURL }}">See all our churches</a></p>
         </section>
 
-        {{/* TODO: Create content/history.md before treating the history link as complete. */}}
-        <section>
-            <h2>Our history</h2>
-            <p>The community has worshipped in Edinburgh since 1948, when Archpriest John Sotnikov, a Russian Chaplain of the Polish Army, began holding services here.</p>
-            <p><a href="{{ "/history/" | relURL }}">Find out more about our history</a>.</p>
-        </section>
-
         <section>
             <h2><a href="{{ "/news/" | relURL }}">Recent news</a></h2>
             {{ $news := where site.RegularPages "Section" "news" }}
             {{ partial "news-list.html" (first 3 $news.ByDate.Reverse) }}
             <p><a href="{{ "/news/" | relURL }}">All news</a></p>
+        </section>
+
+        {{/* TODO: Create content/history.md before treating the history link as complete. */}}
+        <section>
+            <h2>Our history</h2>
+            <p>The community has worshipped in Edinburgh since 1948, when Archpriest John Sotnikov, a Russian Chaplain of the Polish Army, began holding services here.</p>
+            <p><a href="{{ "/history/" | relURL }}">Find out more about our history</a>.</p>
         </section>
     </div>
 {{ end }}
